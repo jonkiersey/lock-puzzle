@@ -27,7 +27,16 @@ const NewRule = ({ submit }: Props) => {
   };
 
   return (
-    <Box component="form" onSubmit={onSubmit} sx={{ display: "flex", gap: "16px", alignItems: "center" }}>
+    <Box
+      component="form"
+      onSubmit={onSubmit}
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+        gap: "16px",
+        alignItems: { sm: "center" },
+      }}
+    >
       <TextField
         autoFocus
         required
