@@ -8,9 +8,25 @@ const App = () => {
       <CssBaseline />
       <Box
         sx={{
-          background: theme.palette.primary.light,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          backgroundImage: {
+            xs: `linear-gradient(-45deg, ${theme.palette.primary.dark}, ${theme.palette.primary.light}, ${theme.palette.primary.dark})`,
+            sm: `linear-gradient(-45deg, ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+          },
+          zIndex: 0,
+        }}
+      />
+      <Box
+        sx={{
+          position: "relative",
           padding: "16px",
-          minHeight: "100vh",
+          zIndex: 1,
+          overflowY: "auto",
+          height: "100vh",
         }}
       >
         <LockPuzzle />
